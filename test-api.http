@@ -1,0 +1,25 @@
+### Teste de Rota Raiz
+GET http://localhost:3000/
+
+### 1. Registrar um novo usuário
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "João Silva",
+  "email": "joao@exemplo.com",
+  "password": "senha123"
+}
+
+### 2. Fazer login com o usuário criado
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "joao@exemplo.com",
+  "password": "senha123"
+}
+
+### 3. Acessar rota protegida (substitua YOUR_TOKEN_HERE pelo token recebido no login)
+GET http://localhost:3000/api/auth/me
+Authorization: Bearer YOUR_TOKEN_HERE

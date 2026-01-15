@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Autenticação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🎉 Área Protegida</h1>
+                <p>Você está autenticado!</p>
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Carregando seus dados...</p>
+            </div>
+
+            <div id="userInfo" class="user-info" style="display: none;">
+                <div class="info-card">
+                    <h2>👤 Informações do Usuário</h2>
+                    <div class="info-item">
+                        <strong>ID:</strong>
+                        <span id="userId"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Nome:</strong>
+                        <span id="userName"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>E-mail:</strong>
+                        <span id="userEmail"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Conta criada em:</strong>
+                        <span id="userCreatedAt"></span>
+                    </div>
+                </div>
+
+                <div class="token-info">
+                    <h3>🔐 Token JWT</h3>
+                    <div class="token-display" id="tokenDisplay"></div>
+                    <small>Este token expira em 7 dias</small>
+                </div>
+
+                <button id="logoutBtn" class="btn btn-danger btn-block">
+                    Sair da Conta
+                </button>
+            </div>
+
+            <div id="errorMessage" class="message message-error" style="display: none;">
+                <p id="errorText"></p>
+                <a href="login.html" class="btn btn-primary">Fazer Login Novamente</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
